@@ -8,12 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
-    private List<Review> reviewList;
+    ArrayList<Review> reviewList;
 
-    public ReviewAdapter(List<Review> reviewList) {
+    public ReviewAdapter(ArrayList<Review> reviewList) {
         this.reviewList = reviewList;
     }
 
@@ -27,7 +28,6 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Review review = reviewList.get(position);
-        holder.houseTitleTextView.setText(review.getHouseTitle());
         holder.reviewTextView.setText(review.getReviewText());
     }
 
@@ -37,12 +37,10 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView houseTitleTextView;
         TextView reviewTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            houseTitleTextView = itemView.findViewById(R.id.review_house_title);
             reviewTextView = itemView.findViewById(R.id.review_text);
         }
     }
