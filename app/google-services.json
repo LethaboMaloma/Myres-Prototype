@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "142472174196",
+    "project_id": "myres-dac7c",
+    "storage_bucket": "myres-dac7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142472174196:android:598ed4d9700880c1ec0f21",
+        "android_client_info": {
+          "package_name": "com.example.myres"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142472174196-3hhcc7dujrdvqrl2rp9n6430pckkk5in.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmkTlYxGNpOIssfwp4nEJr7K3fMUfpdNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142472174196-3hhcc7dujrdvqrl2rp9n6430pckkk5in.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
