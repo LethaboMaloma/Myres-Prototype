@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Myres"
         tools:targetApi="31">
         <activity
+            android:name=".SignuppageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginpageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
