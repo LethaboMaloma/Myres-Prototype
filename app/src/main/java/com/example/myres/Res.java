@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Res extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
         reviewbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent thirdscrn = new Intent(MainActivity2.this, ReviewActivity.class);
+                Intent thirdscrn = new Intent(Res.this, ReviewActivity.class);
                 startActivity(thirdscrn);
             }
         });

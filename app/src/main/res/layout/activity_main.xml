@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63" />
+        app:layout_constraintGuide_begin="415dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -155,8 +155,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/untitled_design"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp"
-                />
+                tools:layout_editor_absoluteY="0dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
