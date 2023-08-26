@@ -5,5 +5,6 @@
     <color name="blue">#234F68</color>
     <color name="soft_grey">#F5F4F8</color>
     <color name="green">#8BC83F</color>
-
+    <color name="text_blue">#204D6C</color>
+    <color name="primary_green">#8BC83D</color>
 </resources>
