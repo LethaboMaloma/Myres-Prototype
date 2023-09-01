@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Startup_page1">
 
     <ImageView
@@ -20,9 +21,10 @@
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/undraw_reviews_lp8w" />
 
@@ -50,8 +52,9 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
         android:fontFamily="@font/raleway"
         android:text="Make your decision based on hundreds\n
 of unbiased,trustworthy and\n
@@ -60,14 +63,15 @@ and former tenants"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:lineHeight="30sp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:lineHeight="30sp" />
 
     <Button
         android:id="@+id/btnStartUpPage2"
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/primary_green"

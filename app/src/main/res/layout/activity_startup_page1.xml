@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Startup_page1">
 
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="For "
+            android:textColor="@color/blue"
             android:textSize="@dimen/text_size_medium_large" />
 
         <TextView
@@ -60,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="By "
+            android:textColor="@color/blue"
             android:textSize="@dimen/text_size_medium_large" />
 
         <TextView
@@ -79,6 +82,7 @@
         android:layout_height="wrap_content"
         android:text="Helping Students make the"
         android:textSize="@dimen/text_size_medium_small"
+        android:textColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -89,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="best descisions"
+        android:textColor="@color/blue"
         android:textSize="@dimen/text_size_medium_small"
         app:layout_constraintBottom_toTopOf="@+id/btnStartUpPage2"
         app:layout_constraintEnd_toEndOf="@+id/textView11"

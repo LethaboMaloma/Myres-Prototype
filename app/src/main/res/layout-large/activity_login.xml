@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/raleway"
-        android:text="Let's Signup."
+        android:text="Let's Login."
         android:textColor="@color/blue"
         android:textSize="30sp"
         android:textStyle="normal"
@@ -110,10 +110,9 @@
 
                 <EditText
                     android:id="@+id/etxtEmail"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:textColor="@color/black"
                     android:inputType="textEmailAddress" />
             </androidx.cardview.widget.CardView>
 
@@ -121,33 +120,46 @@
                 android:id="@+id/cardView2"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="140dp"
                 app:cardBackgroundColor="#4BCCCCCC"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                tools:layout_editor_absoluteY="135dp">
 
                 <EditText
                     android:id="@+id/etxtPassword"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
                     android:ems="10"
-                    android:textColor="@color/black"
+
                     android:inputType="textPassword" />
             </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="48dp"
-                android:layout_marginBottom="36dp"
+                android:layout_marginTop="12dp"
                 android:backgroundTint="@color/green"
-                android:text="Signup"
+                android:text="LogIn"
                 android:textColor="@color/blue"
                 android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/white"
+                android:text="Don't have a account, sign-up."
+                android:textColor="@color/blue"
+                android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
