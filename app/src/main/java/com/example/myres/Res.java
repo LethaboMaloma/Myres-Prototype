@@ -4,31 +4,11 @@ import java.util.ArrayList;
 
 public class Res {
     private String resName, resLocation, resDescription;
-    private int resRating;
-    private int monthlyRent;
+    private double resRating, monthlyRent;
+    private int resDistance;
 
-    public int getDistance() {
-        return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
-
-    private int distance;
-    private ArrayList<String> amenities;
+    private ArrayList<Integer> amenities;
     private ArrayList<Review> reviews;
-
-    public Res(String resName, String resLocation, String resDescription, int resRating, int monthlyRent, int distance, ArrayList<String> amenities, ArrayList<Review> reviews) {
-        this.resName = resName;
-        this.resLocation = resLocation;
-        this.resDescription = resDescription;
-        this.resRating = resRating;
-        this.monthlyRent = monthlyRent;
-        this.distance = distance;
-        this.amenities = amenities;
-        this.reviews = reviews;
-    }
 
     public String getResName() {
         return resName;
@@ -54,27 +34,35 @@ public class Res {
         this.resDescription = resDescription;
     }
 
-    public int getResRating() {
+    public double getResRating() {
         return resRating;
     }
 
-    public void setResRating(int resRating) {
+    public void setResRating(double resRating) {
         this.resRating = resRating;
     }
 
-    public int getMonthlyRent() {
+    public double getMonthlyRent() {
         return monthlyRent;
     }
 
-    public void setMonthlyRent(int monthlyRent) {
+    public void setMonthlyRent(double monthlyRent) {
         this.monthlyRent = monthlyRent;
     }
 
-    public ArrayList<String> getAmenities() {
+    public int getResDistance() {
+        return resDistance;
+    }
+
+    public void setResDistance(int resDistance) {
+        this.resDistance = resDistance;
+    }
+
+    public ArrayList<Integer> getAmenities() {
         return amenities;
     }
 
-    public void setAmenities(ArrayList<String> amenities) {
+    public void setAmenities(ArrayList<Integer> amenities) {
         this.amenities = amenities;
     }
 
@@ -85,4 +73,16 @@ public class Res {
     public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;
     }
+
+    public Res(String resName, double resRating, String resLocation, String resDescription, double monthlyRent, int resDistance, ArrayList<Integer> amenities, ArrayList<Review> reviews) {
+        this.resName = resName;
+        this.resLocation = resLocation;
+        this.resDescription = resDescription;
+        this.resRating = resRating;
+        this.monthlyRent = monthlyRent;
+        this.resDistance = resDistance;
+        this.amenities = amenities;
+        this.reviews = reviews;
+    }
+
 }

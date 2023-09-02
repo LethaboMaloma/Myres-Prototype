@@ -31,9 +31,9 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
         Res res = allRes.get(position);
 
         holder.resName.setText(res.getResName());
-        holder.resRating.setText(res.getResRating());
+        holder.resRating.setText(String.valueOf(res.getResRating()));
         holder.resLocation.setText(res.getResLocation());
-        holder.resDistance.setText(res.getDistance());
+        holder.resDistance.setText(res.getResDistance());
     }
 
     @Override

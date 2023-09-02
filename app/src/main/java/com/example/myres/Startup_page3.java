@@ -18,7 +18,7 @@ public class Startup_page3 extends AppCompatActivity {
         btnMainPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toSignUp = new Intent(Startup_page3.this, MainActivity.class);
+                Intent toSignUp = new Intent(Startup_page3.this, LoginActivity.class);
                 startActivity(toSignUp);
             }
     });
