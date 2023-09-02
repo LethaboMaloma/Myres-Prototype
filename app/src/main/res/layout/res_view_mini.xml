@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resViewMini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/soft_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvResImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/resImage"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    app:srcCompat="@drawable/resimage" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/resName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/raleway"
+                android:text="Yale Village"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/cvResImage"
+                app:layout_constraintTop_toTopOf="@+id/cvResImage" />
+
+            <TextView
+                android:id="@+id/resRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway"
+                android:drawableStart="@drawable/star"
+                android:drawablePadding="4dp"
+                android:text="4.5"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/resName"
+                app:layout_constraintTop_toBottomOf="@+id/resName" />
+
+            <TextView
+                android:id="@+id/resLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:fontFamily="@font/raleway"
+                android:text="Parktown"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/resRating"
+                app:layout_constraintTop_toBottomOf="@+id/resRating" />
+
+            <TextView
+                android:id="@+id/resType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/raleway"
+                android:text="Mixed Accomodation"
+                android:drawableStart="@drawable/mixed_icon"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="@+id/cvResImage"
+                app:layout_constraintTop_toBottomOf="@+id/cvResImage" />
+
+            <TextView
+                android:id="@+id/resWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/baseline_wifi_24"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="Uncapped WiFi"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/cvResImage"
+                app:layout_constraintTop_toBottomOf="@+id/resType" />
+
+            <TextView
+                android:id="@+id/resPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/baseline_power_settings_new_24"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="Backup Power"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/resType"
+                app:layout_constraintTop_toBottomOf="@+id/resWifi" />
+
+            <TextView
+                android:id="@+id/resDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/road_icon"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="100m from Campus"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/resType"
+                app:layout_constraintTop_toBottomOf="@+id/resPower" />
+
+            <TextView
+                android:id="@+id/txtvFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/raleway"
+                android:text="From"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/cvResImage"
+                app:layout_constraintTop_toBottomOf="@+id/resDistance" />
+
+            <TextView
+                android:id="@+id/monthlyRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text=" R5 900"
+                android:textColor="@color/blue"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtvFrom"
+                app:layout_constraintStart_toEndOf="@+id/txtvFrom"
+                app:layout_constraintTop_toTopOf="@+id/txtvFrom" />
+
+            <TextView
+                android:id="@+id/txtvPerMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text=" per month"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtvFrom"
+                app:layout_constraintStart_toEndOf="@+id/monthlyRent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
