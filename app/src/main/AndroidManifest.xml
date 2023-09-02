@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Res"
+            android:name=".ResActivity"
             android:exported="false" />
         <activity
             android:name=".ReviewActivity"

@@ -15,13 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //image button
-        ImageButton to_discription = (ImageButton) findViewById(R.id.imageButton1);
-        to_discription.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toRes = new Intent(MainActivity.this, Res.class);
-                startActivity(toRes);
-            }
-        });
+//        ImageButton to_discription = (ImageButton) findViewById(R.id.imageButton1);
+//        to_discription.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent toRes = new Intent(MainActivity.this, ResActivity.class);
+//                startActivity(toRes);
+//            }
+//        });
     }
 }

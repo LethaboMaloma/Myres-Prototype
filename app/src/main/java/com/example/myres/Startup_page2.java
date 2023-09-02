@@ -13,8 +13,8 @@ public class Startup_page2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup_page2);
-        Button btnStartUpPage2 = findViewById(R.id.btnStartUpPage2);
-        btnStartUpPage2.setOnClickListener(new View.OnClickListener() {
+        Button btnStartUpPage3 = findViewById(R.id.btnStartUpPage3);
+        btnStartUpPage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent toSignUp = new Intent(Startup_page2.this, Startup_page3.class);
