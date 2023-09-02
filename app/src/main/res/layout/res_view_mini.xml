@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:background="@drawable/white_rounded_bg"
+    android:layout_margin="10dp"
+    android:elevation="5dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/resViewMini"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="20dp"
         app:cardBackgroundColor="@color/soft_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,9 +57,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/raleway"
                 android:drawableStart="@drawable/star"
                 android:drawablePadding="4dp"
+                android:fontFamily="@font/raleway"
                 android:text="4.5"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:drawableStart="@drawable/baseline_location_on_24"
+                android:drawableStart="@drawable/location_ic"
                 android:fontFamily="@font/raleway"
                 android:text="Parktown"
                 android:textColor="@color/blue"
@@ -84,21 +84,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/raleway"
-                android:text="Mixed Accomodation"
                 android:drawableStart="@drawable/mixed_icon"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="Mixed Accomodation"
                 android:textColor="@color/blue"
                 android:textSize="15sp"
-                android:gravity="center"
                 app:layout_constraintStart_toStartOf="@+id/cvResImage"
                 app:layout_constraintTop_toBottomOf="@+id/cvResImage" />
 
             <TextView
-                android:id="@+id/resWifi"
+                android:id="@+id/resAmenity2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:drawableStart="@drawable/baseline_wifi_24"
+                android:drawableStart="@drawable/wifi_icon"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/raleway"
                 android:gravity="center"
@@ -109,11 +109,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/resType" />
 
             <TextView
-                android:id="@+id/resPower"
+                android:id="@+id/resAmenity3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:drawableStart="@drawable/baseline_power_settings_new_24"
+                android:drawableStart="@drawable/power_icon"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/raleway"
                 android:gravity="center"
@@ -121,14 +121,14 @@
                 android:textColor="@color/blue"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="@+id/resType"
-                app:layout_constraintTop_toBottomOf="@+id/resWifi" />
+                app:layout_constraintTop_toBottomOf="@+id/resAmenity2" />
 
             <TextView
                 android:id="@+id/resDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:drawableStart="@drawable/road_icon"
+                android:drawableStart="@drawable/road_ic"
                 android:drawablePadding="4dp"
                 android:fontFamily="@font/raleway"
                 android:gravity="center"
@@ -136,7 +136,7 @@
                 android:textColor="@color/blue"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="@+id/resType"
-                app:layout_constraintTop_toBottomOf="@+id/resPower" />
+                app:layout_constraintTop_toBottomOf="@+id/resAmenity3" />
 
             <TextView
                 android:id="@+id/txtvFrom"

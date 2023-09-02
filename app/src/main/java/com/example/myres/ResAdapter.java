@@ -33,7 +33,13 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
         holder.resName.setText(res.getResName());
         holder.resRating.setText(String.valueOf(res.getResRating()));
         holder.resLocation.setText(res.getResLocation());
-        holder.resDistance.setText(res.getResDistance());
+        holder.resDistance.setText(String.valueOf(res.getResDistance()));
+        String rent = "R" + String.valueOf(res.getMonthlyRent());
+        holder.monthlyRent.setText(rent);
+
+        holder.resType.setText(String.valueOf(res.getAmenities().get(0)));
+        holder.resAmenity2.setText(String.valueOf(res.getAmenities().get(1)));
+        holder.resAmenity3.setText(String.valueOf(res.getAmenities().get(2)));
     }
 
     @Override
@@ -42,7 +48,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView resName, resRating, resLocation, resType, resWifi, resDistance, monthlyRent;
+        TextView resName, resRating, resLocation, resType, resAmenity2, resDistance, monthlyRent, resAmenity3;
         ImageView resImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,10 +56,12 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
             resImage = itemView.findViewById(R.id.resImage);
             resRating = itemView.findViewById(R.id.resRating);
             resLocation = itemView.findViewById(R.id.resLocation);
-            resType = itemView.findViewById(R.id.resType);
-            resWifi = itemView.findViewById(R.id.resWifi);
-            resDistance = itemView.findViewById(R.id.resDistance);
             monthlyRent = itemView.findViewById(R.id.monthlyRent);
+//            amenity list
+            resType = itemView.findViewById(R.id.resType);
+            resDistance = itemView.findViewById(R.id.resDistance);
+            resAmenity2 = itemView.findViewById(R.id.resAmenity2);
+            resAmenity3 = itemView.findViewById(R.id.resAmenity3);
         }
     }
 }

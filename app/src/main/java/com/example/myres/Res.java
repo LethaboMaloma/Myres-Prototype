@@ -1,80 +1,73 @@
 package com.example.myres;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Res {
     private String resName, resLocation, resDescription;
     private double resRating, monthlyRent;
     private int resDistance;
 
-    private ArrayList<Integer> amenities;
+    public ArrayList<Integer> getResImages() {
+        return resImages;
+    }
+
+    ArrayList<Integer> resImages;
+    private ArrayList<Object> amenities;
     private ArrayList<Review> reviews;
+    public static HashMap<String, Integer> amenityIcons = new HashMap<>();
+
+    static {
+        amenityIcons.put("mixed",R.drawable.mixed_icon);
+        amenityIcons.put("girl", R.drawable.girls_only_ic);
+        amenityIcons.put("boy", R.drawable.boys_only_ic);
+        amenityIcons.put("wifi", R.drawable.wifi_icon);
+        amenityIcons.put("road", R.drawable.road_ic);
+        amenityIcons.put("power", R.drawable.power_icon);
+        amenityIcons.put("dumbell", R.drawable.dumbell_ic);
+        amenityIcons.put("car", R.drawable.car_ic);
+        amenityIcons.put("water", R.drawable.water_icon);
+        amenityIcons.put("computer", R.drawable.computer_ic);
+    }
 
     public String getResName() {
         return resName;
-    }
-
-    public void setResName(String resName) {
-        this.resName = resName;
     }
 
     public String getResLocation() {
         return resLocation;
     }
 
-    public void setResLocation(String resLocation) {
-        this.resLocation = resLocation;
-    }
-
     public String getResDescription() {
         return resDescription;
-    }
-
-    public void setResDescription(String resDescription) {
-        this.resDescription = resDescription;
     }
 
     public double getResRating() {
         return resRating;
     }
 
-    public void setResRating(double resRating) {
-        this.resRating = resRating;
-    }
-
     public double getMonthlyRent() {
         return monthlyRent;
-    }
-
-    public void setMonthlyRent(double monthlyRent) {
-        this.monthlyRent = monthlyRent;
     }
 
     public int getResDistance() {
         return resDistance;
     }
 
-    public void setResDistance(int resDistance) {
-        this.resDistance = resDistance;
-    }
-
-    public ArrayList<Integer> getAmenities() {
+    public ArrayList<Object> getAmenities() {
         return amenities;
-    }
-
-    public void setAmenities(ArrayList<Integer> amenities) {
-        this.amenities = amenities;
     }
 
     public ArrayList<Review> getReviews() {
         return reviews;
     }
 
-    public void setReviews(ArrayList<Review> reviews) {
-        this.reviews = reviews;
+    public static HashMap<String, Integer> getAmenityIcons() {
+        return amenityIcons;
     }
 
-    public Res(String resName, double resRating, String resLocation, String resDescription, double monthlyRent, int resDistance, ArrayList<Integer> amenities, ArrayList<Review> reviews) {
+    public Res(ArrayList<Integer> resImages, String resName, double resRating, String resLocation, String resDescription, double monthlyRent, int resDistance, ArrayList<Object> amenities, ArrayList<Review> reviews) {
+        this.resImages = resImages;
         this.resName = resName;
         this.resLocation = resLocation;
         this.resDescription = resDescription;
