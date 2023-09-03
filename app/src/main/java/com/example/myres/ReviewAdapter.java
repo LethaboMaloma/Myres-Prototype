@@ -36,11 +36,12 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView reviewTextView;
+        TextView reviewTextView, user;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             reviewTextView = itemView.findViewById(R.id.review_text);
+            user = itemView.findViewById(R.id.user);
         }
     }
 }

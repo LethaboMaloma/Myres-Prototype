@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +29,7 @@ public class ReviewActivity extends AppCompatActivity {
     private ArrayList<Review> reviewList;
     private ReviewAdapter reviewAdapter;
     private Button refresh;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +56,11 @@ public class ReviewActivity extends AppCompatActivity {
                 DatabaseReference reviewsRef = FirebaseDatabase.getInstance().getReference().child("review");
                 DatabaseReference newReviewRef = reviewsRef.push();
 
+                FirebaseUser user = mAuth.getCurrentUser();
+
                 // Create a Review object
-                Review review = new Review(reviewEditText.getText().toString());
+                assert user != null;
+                Review review = new Review(user.getEmail(), reviewEditText.getText().toString());
 
                 // Set the value of the review under the generated key
                 newReviewRef.setValue(review);
@@ -101,29 +107,4 @@ public class ReviewActivity extends AppCompatActivity {
             }
         });
     }
-
-//
-//    private void saveReview(Review review) {
-//        reviewsCollection.add(review)
-//                .addOnSuccessListener(documentReference -> {
-//                    // Review saved successfully
-//                })
-//                .addOnFailureListener(e -> {
-//                    // Handle error
-//                });
-//    }
-//
-//    private void deleteReviewsForHouse(String houseTitle) {
-//        reviewsCollection.whereEqualTo("houseTitle", houseTitle)
-//                .get()
-//                .addOnCompleteListener(task -> {
-//                    if (task.isSuccessful()) {
-//                        for (QueryDocumentSnapshot document : task.getResult()) {
-//                            document.getReference().delete();
-//                        }
-//                    } else {
-//                        // Handle error
-//                    }
-//                });
-//    }
 }
