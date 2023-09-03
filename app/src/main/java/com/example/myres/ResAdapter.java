@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
@@ -33,13 +35,21 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
         holder.resName.setText(res.getResName());
         holder.resRating.setText(String.valueOf(res.getResRating()));
         holder.resLocation.setText(res.getResLocation());
-        holder.resDistance.setText(String.valueOf(res.getResDistance()));
+        int dist= res.getResDistance()/100;
+        String distance = String.valueOf(dist) + "kms from University";
+        holder.resDistance.setText(distance);
         String rent = "R" + String.valueOf(res.getMonthlyRent());
         holder.monthlyRent.setText(rent);
 
         holder.resType.setText(String.valueOf(res.getAmenities().get(0)));
         holder.resAmenity2.setText(String.valueOf(res.getAmenities().get(1)));
         holder.resAmenity3.setText(String.valueOf(res.getAmenities().get(2)));
+
+        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(String.valueOf(res.getResImages().get(1)), "drawable", holder.itemView.getContext().getPackageName());
+
+        Glide.with(holder.itemView.getContext())
+                .load(drawableResourceId)
+                .into(holder.resImage);
     }
 
     @Override
