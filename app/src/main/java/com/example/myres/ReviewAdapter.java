@@ -28,6 +28,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Review review = reviewList.get(position);
         holder.reviewTextView.setText(review.getReviewText());
+        holder.user.setText(review.getUser());
     }
 
     @Override

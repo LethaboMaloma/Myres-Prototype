@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resFullViewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/eclipse" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/raleway"
+                    android:maxLines="2"
+                    android:text="Yale Village"
+                    android:textColor="@color/blue"
+                    android:textSize="60dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/resRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableStart="@drawable/star"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="4.5"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/resLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableStart="@drawable/location_ic"
+                    android:fontFamily="@font/raleway"
+                    android:text="Parktown"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/resRating"
+                    app:layout_constraintTop_toBottomOf="@+id/resRating" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/soft_grey"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/resLocation">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvPrimaryImage"
+                            android:layout_width="155dp"
+                            android:layout_height="155dp"
+                            android:layout_marginStart="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="20dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cvResImage3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/cvResImage2">
+
+                            <ImageButton
+                                android:id="@+id/primaryImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/resimage"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvResImage2"
+                            android:layout_width="155dp"
+                            android:layout_height="77dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cvPrimaryImage"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageButton
+                                android:id="@+id/resImage2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/res_image_2" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvResImage3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="20dp"
+                            app:layout_constraintEnd_toEndOf="@+id/cvResImage2"
+                            app:layout_constraintStart_toStartOf="@+id/cvResImage2"
+                            app:layout_constraintTop_toBottomOf="@+id/cvResImage2">
+
+                            <ImageButton
+                                android:id="@+id/resImage3"
+                                android:layout_width="155dp"
+                                android:layout_height="77dp"
+                                app:srcCompat="@drawable/res_image_3" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/resDescription"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/raleway"
+                            android:text="Yale Village offers massive outdoor spaces, from beautiful gardens, numerous sports fields to a swimming pool. There are countless outdoor chill areas, to quietly read a book, study or even just catch up with friends. When you live at Yale Village, all you need to worry about is getting good grades!"
+                            android:textColor="@color/blue"
+                            app:layout_constraintEnd_toEndOf="@+id/cvResImage3"
+                            app:layout_constraintStart_toStartOf="@+id/cvPrimaryImage"
+                            app:layout_constraintTop_toBottomOf="@+id/cvResImage3" />
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:id="@+id/linearLayout3"-->
+                        <!--                            android:layout_width="160dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="16dp"-->
+                        <!--                            android:gravity="left"-->
+                        <!--                            android:orientation="vertical"-->
+                        <!--                            android:paddingBottom="10dp"-->
+                        <!--                            app:layout_constraintStart_toStartOf="@+id/resDescription"-->
+                        <!--                            app:layout_constraintTop_toBottomOf="@+id/resDescription">-->
+
+                        <TextView
+                            android:id="@+id/resType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:drawableStart="@drawable/mixed_icon"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Mixed Res"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/resDescription"
+                            app:layout_constraintTop_toBottomOf="@+id/resDescription" />
+
+                        <TextView
+                            android:id="@+id/resAmenity2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:drawableStart="@drawable/wifi_icon"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Uncapped WiFi"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/resType"
+                            app:layout_constraintTop_toBottomOf="@+id/resType" />
+
+                        <TextView
+                            android:id="@+id/resAmenity3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:drawableStart="@drawable/power_icon"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Backup Power"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/resAmenity2"
+                            app:layout_constraintTop_toBottomOf="@+id/resAmenity2" />
+
+                        <TextView
+                            android:id="@+id/resDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:drawableStart="@drawable/road_ic"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Close to Campus"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/resAmenity3"
+                            app:layout_constraintTop_toBottomOf="@+id/resAmenity3" />
+                        <!--                        </LinearLayout>-->
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="160dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:gravity="left"-->
+                        <!--                            android:orientation="vertical"-->
+                        <!--                            android:paddingBottom="10dp"-->
+                        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                            app:layout_constraintStart_toEndOf="@+id/linearLayout3"-->
+                        <!--                            app:layout_constraintTop_toTopOf="@+id/linearLayout3">-->
+
+                        <TextView
+                            android:id="@+id/resGym"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="170dp"
+                            android:drawableStart="@drawable/dumbell_ic"
+                            android:drawablePadding="7dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Gym"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/resType" />
+
+                        <TextView
+                            android:id="@+id/resParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/car_ic"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Free Parking"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/resAmenity2"
+                            app:layout_constraintStart_toStartOf="@+id/resGym"
+                            app:layout_constraintTop_toTopOf="@+id/resAmenity2" />
+
+                        <TextView
+                            android:id="@+id/resPool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/water_icon"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Swimming pool"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/resAmenity3"
+                            app:layout_constraintStart_toStartOf="@+id/resParking"
+                            app:layout_constraintTop_toTopOf="@+id/resAmenity3" />
+
+                        <TextView
+                            android:id="@+id/resComputer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/computer_ic"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:text="Computer Lab"
+                            android:textColor="@color/blue"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/resDistance"
+                            app:layout_constraintStart_toStartOf="@+id/resPool"
+                            app:layout_constraintTop_toTopOf="@+id/resDistance" />
+                        <!--                        </LinearLayout>-->
+
+                        <TextView
+                            android:id="@+id/txtvFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/raleway"
+                            android:text="From"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="@+id/resDistance"
+                            app:layout_constraintTop_toBottomOf="@+id/resDistance" />
+
+                        <TextView
+                            android:id="@+id/monthlyRent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:text=" R5 900"
+                            android:textColor="@color/blue"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtvFrom"
+                            app:layout_constraintStart_toEndOf="@+id/txtvFrom"
+                            app:layout_constraintTop_toTopOf="@+id/txtvFrom" />
+
+                        <TextView
+                            android:id="@+id/txtvPerMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway"
+                            android:text=" per month"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtvFrom"
+                            app:layout_constraintStart_toEndOf="@+id/monthlyRent" />
+
+                        <Button
+                            android:id="@+id/btnReviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/raleway"
+                            android:padding="1dp"
+                            android:backgroundTint="@color/grey"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:text="Reviews"
+                            app:layout_constraintStart_toStartOf="@+id/txtvFrom"
+                            app:layout_constraintTop_toBottomOf="@+id/monthlyRent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

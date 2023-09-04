@@ -1,5 +1,8 @@
 package com.example.myres;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -50,6 +54,14 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.resImage);
+
+        holder.resViewMini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toResViewFull = new Intent(holder.itemView.getContext(), resFullViewActivity.class);
+                view.getContext().startActivity(toResViewFull);
+            }
+        });
     }
 
     @Override
@@ -60,6 +72,8 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView resName, resRating, resLocation, resType, resAmenity2, resDistance, monthlyRent, resAmenity3;
         ImageView resImage;
+
+        CardView resViewMini;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             resName = itemView.findViewById(R.id.resName);
@@ -72,6 +86,8 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
             resDistance = itemView.findViewById(R.id.resDistance);
             resAmenity2 = itemView.findViewById(R.id.resAmenity2);
             resAmenity3 = itemView.findViewById(R.id.resAmenity3);
+
+            resViewMini = itemView.findViewById(R.id.resViewMini);
         }
     }
 }
